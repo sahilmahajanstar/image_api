@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"\>
+</head>
+<body>
+    <div class="landing-page">
+        <!-- purple tint on image -->
+        <div class="cover">
+        </div>
+        <!-- Navigation Bar -->
+        {% include "./header.html" %}
+        <div class="main-content">
+            <div>
+                
+               <h1><span style='color:sandybrown'> Here </span> You Can Find High Quality Images</h1> 
+               <br>
+               <br>
+               <button> <a href="#use">How to use?</a></button>
+               <br>
+               <form class="upload" action="/upload" method="post" accept="images/*" enctype="multipart/form-data"> 
+                    <div class="row">
+                        <!-- Upload image -->
+                        <label  for="image">Choose Photo From Computer</label>
+                        {% for category,message in get_flashed_messages(with_categories=True) %}
+                            <div class="alert-{{category}}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                    <br>
+                    <br>
+                    <input type="file" name="image" id="image" multiple  required>
+                    <button type="submit">Upload</button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div id="use">
+        <!-- Steps -->
+        1.Go to Api Demo Tab
+        <br>
+        2.Enter your name and pressed generate key
+        <br>
+        3.Enter image name in input box
+        <br>
+        4.Click on Send Button you will see image along with it's basic information
+        <br>
+        5.If You request more than 5 images per minute you reached your limit and wait for 1 minute to complete.  
+    </div>
+</body>
+</html>

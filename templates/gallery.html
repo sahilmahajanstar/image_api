@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/gallery.css')}}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    {% include "./header.html" %}
+    <div class="image-grid">
+        {% for name in images %}
+            <div class="container">
+                <img src="../public/images/{{name}}">
+                <div class="cover1">
+                <p>{{name}}</p> 
+                </div>
+            </div> 
+        {% endfor %}
+    </div>
+
+    <script src="{{url_for('static',filename='js/flip.js')}}"></script>
+</body>
+</html>

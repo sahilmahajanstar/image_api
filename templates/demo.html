@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/gallery.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/demo.css')}}">
+    <title>Demo</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.js"
+			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			  crossorigin="anonymous"></script>
+    <script type='text/javascript' src="{{url_for('static',filename='js/flip.js')}}"></script>
+</head>
+<body>
+    {% include "./header.html" %}
+    <div class="box">
+        <div class="key">
+            <!-- Email Id -->
+            <input type="text" name="name" id="name" placeholder="Enter Your email">
+            <div class="key-content" >
+        
+            </div>
+            <!-- button for generate key -->
+            <button onclick="generate_key()">Generate Key</button>
+        </div>
+
+        <div class="key">
+             <div class="url" >
+                 <!-- API key -->
+                <input type="text" name="key" id="key" placeholder="Enter key">
+                <!-- image Name -->
+                <input type="text" name="image" id="image" placeholder="Enter Image Name">
+             </div>
+            <button onclick="get_image()">Send</button>
+            <div class="response">
+                <!-- display requested image -->
+                <img src="" id="imageshow" width=300 height=150>
+                <div class="res">
+                <!--show response  -->
+                </div>
+            </div>
+        </div>
+
+        </button>
+
+    </div>
+</body>
+</html>

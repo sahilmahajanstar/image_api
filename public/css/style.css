@@ -1,0 +1,213 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-color:rgb(192, 179, 179);
+}
+.nav{
+    position: absolute;
+    display: flex;
+    width:50vw;
+}
+.nav a{
+    color:white;
+    flex:1;  
+    text-decoration: none;
+    /* width:70px; */
+    margin:10px;
+    margin-top: 20px;
+    text-align: center;
+    z-index: 3;
+    align-items: center;
+}
+.nav a:hover{
+    color:skyblue;
+    font-size: 20px;
+}
+.landing-page{
+    background-image:url("/public/images/cloudy-full-moon.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center/center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+}
+.cover{
+    position: absolute;
+    background-color: purple;
+    top:0;
+    width:100vw;
+    height:100vh;
+    opacity: 0.3;
+}
+
+
+
+.main-content{
+    position: relative; 
+    color: white;
+    top:100px;
+    max-width:1000px;
+    margin:auto;
+    padding: 15px;
+    
+}
+.main-content>div{
+    position: absolute;
+    padding: 15px;
+    left:400px;
+}
+
+.main-content>div button{
+    position: absolute;
+    height:50px;
+    left:250px;
+    background-color:rgb(173, 43, 43) ;
+    border: none;
+    border-radius: 5px;
+    
+}
+input[type='file']{
+    top:250px;
+    display: none;
+    left:0
+}
+.upload{
+    position: relative;
+    color: white;
+    margin:0;
+    padding:0;
+}
+.upload .row
+{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top:100px;
+    width: 40vw;
+}
+.upload button[type='submit']{
+    position: absolute;
+    width:100px;
+    top:200px;
+    left:100px;
+    color: white;
+    font-size: 15px;
+}
+
+.upload .alert-error {
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    border: 2px solid darkred;
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+    width:260px;
+
+}
+
+.alert-success{
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    border: 2px solid green;
+    background-color: rgb(20, 170, 85);
+    margin-left: 10px;
+    color: white;
+    width:260px;
+    
+}
+
+
+.upload label{
+    margin:0;
+    background-color: rgb(167, 56, 22);
+    z-index: 2;
+    width:280px;
+    height:30px;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+.upload label:hover{
+    background-color: rgb(145, 59, 33);
+}
+.main-content div button a{
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+}
+.main-content div button:hover{
+    background-color: rgb(143, 10, 10);
+}
+@media (max-width:800px)
+{
+    .nav{
+        width: 100vw;
+    }
+    .main-content div{
+        left:100px;
+    }
+
+    .main-content div button{
+        position: absolute;
+        height:50px;
+        left:200px;
+        
+    }
+    .upload .row{
+        width:70vw;
+    }
+    .alert-success{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .alert-error{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    
+}
+
+#use{
+    height:150x;
+    padding: 10px;
+    margin:20px
+}
+@media (max-width:400px)
+{
+    .main-content{
+        position: relative; 
+        color: white;
+        top:100px;
+        max-width:1000px;
+        padding: 15px;
+        
+    }
+    .upload .row{
+        width:100vw;
+    }
+    .alert-success{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .alert-error{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .main-content div{
+        left:0px;
+    }
+    .main-content div button{
+        left:100px;
+        
+    }
+}
